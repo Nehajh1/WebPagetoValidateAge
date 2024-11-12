@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+* {
+background-color: wheat;
+}
+.mainconenter {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+margin: 5px;
+border: 2px solid burlywood;
+border-radius: 5px;
+box-sizing: border-box;
+}
+table {
+padding: 18px;
+}
+.mainconenter * {
+background-color: bisque;
+}
+center {
+padding: 10px;
+}
+#submitbtn {
+margin-top: 0px;
+}
+</style>
+</head>
+<body>
+<div class="mainconenter">
+<table style="width:100%">
+<tr>
+<th colspan="2"> Lab 3 | onclick() and onblur</th>
+</tr>
+<tr>
+<td style="width: 50%;">
+<label for="age"> Enter age</label>
+</td>
+<td>
+<input type="number" id="age" onblur="findAge()">
+</td>
+</tr>
+<tr>
+<td style="width: 50%;">
+<label for="desc">Description</label>
+</td>
+<td>
+<input type="text" alt="Description" id="desc" width="48" height="48">
+</td>
+</tr>
+<tr>
+<th colspan="2">
+<br>
+<input type="submit"
+id="submitbtn" onclick="cntword()">
+</th>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+function findAge() {
+var myAge = document.getElementById ('age').value;
+if(myAge <17) {
+alert("you are under age. not allow!");
+}
+else {
+alert("you are adult!");
+}
+}
+function cntword() {
+var text = document.getElementById ("desc").value;
+document.getElementById("counttext"). innerHTML = "your have entered" + text.length + 
+"words.";
+}
+</script>
+</body>
+</html>
